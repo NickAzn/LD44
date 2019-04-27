@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: f52bdbab2678abe43860f4b4763157ed
+guid: 81e3410e9069c804599d1f7427f085df
 TextureImporter:
   fileIDToRecycleName:
-    21300000: MoneyDollar
-    21300002: MoneyCoin
+    21300000: FloorTiles_0
+    21300002: FloorTiles_1
+    21300004: FloorTiles_2
+    21300006: FloorTiles_3
+    21300008: FloorTiles_4
+    21300010: FloorTiles_5
+    21300012: FloorTiles_6
+    21300014: FloorTiles_7
+    21300016: FloorTiles_8
+    21300018: FloorTiles_9
+    21300020: FloorTiles_10
+    21300022: FloorTiles_11
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -108,41 +118,61 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MoneyDollar
+      name: FloorTiles_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 73
+        y: 256
         width: 128
-        height: 51
+        height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2567d6082da30494ab98cacf97d69b7b
+      spriteID: 5fbfbe5a87ccf224880413fcaf65a5e8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MoneyCoin
+      name: FloorTiles_1
       rect:
         serializedVersion: 2
-        x: 28
-        y: 1
-        width: 70
-        height: 70
+        x: 0
+        y: 128
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f56bf0fd0de9cf04984c692b074231f6
+      spriteID: 0f0297ae39219f441b6806c258297f2c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloorTiles_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 863ab51c9df1f5048817d09f676c7f7a
       vertices: []
       indices: 
       edges: []
@@ -150,7 +180,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: fa0e2db7cef60ea40b2cd7044ac60c25
+    spriteID: 9df79d1e2c2932d48bf27f805f6de872
     vertices: []
     indices: 
     edges: []

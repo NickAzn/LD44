@@ -1,9 +1,7 @@
 fileFormatVersion: 2
-guid: f52bdbab2678abe43860f4b4763157ed
+guid: 193150f2c6cebef40a4a52f0dc4bb1c7
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: MoneyDollar
-    21300002: MoneyCoin
+  fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -42,7 +40,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -106,51 +104,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: MoneyDollar
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 73
-        width: 128
-        height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2567d6082da30494ab98cacf97d69b7b
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MoneyCoin
-      rect:
-        serializedVersion: 2
-        x: 28
-        y: 1
-        width: 70
-        height: 70
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f56bf0fd0de9cf04984c692b074231f6
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: fa0e2db7cef60ea40b2cd7044ac60c25
+    spriteID: 5ddc06bb09e84a94884b5716b3129c63
     vertices: []
     indices: 
     edges: []
