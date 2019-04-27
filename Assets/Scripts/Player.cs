@@ -25,6 +25,12 @@ public class Player : MonoBehaviour {
         money += amount;
         if (money <= 0f) {
             LevelManager.Instance.EndGame();
+            foreach (Transform child in transform) {
+                child.SetParent(null);
+            }
+            foreach (ParticleSystem particles in trailParticles) {
+                Destroy(particles.gameObject);
+            }
             Destroy(gameObject);
         }
     }
@@ -35,8 +41,8 @@ public class Player : MonoBehaviour {
 
     private void Update() {
         transform.Rotate(0, 0, rotateSpeed * Time.deltaTime * LevelManager.Instance.GetSpeedMult());
-        float size = money / 2500;
-        if (size > 1.25) {
+        float size = money / 2500f;
+        if (size > 1.25f) {
             size = 1.25f;
         } else if (size < 0.2) {
             size = 0.2f;
@@ -44,6 +50,9 @@ public class Player : MonoBehaviour {
         transform.localScale = new Vector3(size, size, 1);
 
         float yDir = Input.GetAxis("Vertical");
+        if (!LevelManager.Instance.started && Input.GetAxisRaw("Vertical") != 0) {
+            LevelManager.Instance.StartGame();
+        }
         Vector3 newPos = new Vector3(transform.position.x, transform.position.y + yDir * Time.deltaTime * speed, transform.position.z);
         rb.MovePosition(newPos);
 

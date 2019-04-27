@@ -18,8 +18,12 @@ public class Money : MonoBehaviour {
         if (collision.tag.Equals("Player")) {
             collision.GetComponent<Player>().ChangeMoney(moneyValue);
             if (particles != null) {
-                GameObject prt = Instantiate(particles, collision.transform);
-                prt.transform.localPosition = new Vector3(0, 0, 0);
+                GameObject prt = Instantiate(particles);
+                prt.transform.localPosition = collision.transform.position;
+                if (moneyValue > 0) {
+                    prt.transform.SetParent(collision.transform);
+                    prt.transform.localScale = Vector3.one;
+                }
             }
             Destroy(gameObject);
         }

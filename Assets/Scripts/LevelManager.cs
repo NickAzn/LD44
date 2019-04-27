@@ -13,6 +13,9 @@ public class LevelManager : MonoBehaviour {
     public TextMeshProUGUI money;
     public TextMeshProUGUI highscoreMoney;
     public Transform grid;
+    public GameObject endPanel;
+    public TextMeshProUGUI endHighscore;
+    public GameObject startPanel;
 
     float speedMult = 1;
     float highscore = 0;
@@ -31,6 +34,7 @@ public class LevelManager : MonoBehaviour {
     List<Transform> mapItems = new List<Transform>();
 
     float gameTime = 1;
+    public bool started = false;
 
     private void Awake() {
         if (Instance == null) {
@@ -41,11 +45,21 @@ public class LevelManager : MonoBehaviour {
         }
     }
 
+    private void Start() {
+        endPanel.SetActive(false);
+        startPanel.SetActive(true);
+        highscoreMoney.text = string.Format("Largest Cash Size: ${0:#.00}", PlayerPrefs.GetFloat("HIGHSCORE", 0));
+    }
+
     public float GetSpeedMult() {
         return speedMult;
     }
 
     private void Update() {
+
+        if (player == null || !started) {
+            return;
+        }
 
         gameTime += Time.deltaTime;
         speedMult = Mathf.Log(gameTime, 7f) + 1;
@@ -98,11 +112,19 @@ public class LevelManager : MonoBehaviour {
     }
 
     public void StartGame() {
+        started = true;
+        startPanel.SetActive(false);
         Time.timeScale = 1f;
     }
 
     public void EndGame() {
-        Time.timeScale = 0f;
+        float overallHighscore = PlayerPrefs.GetFloat("HIGHSCORE", 0);
+        if (highscore > overallHighscore) {
+            PlayerPrefs.SetFloat("HIGHSCORE", highscore);
+            overallHighscore = highscore;
+        }
+        endHighscore.text = string.Format("Highscore: ${0:#.00}", overallHighscore);
+        endPanel.SetActive(true);
     }
 
     public void RestartGame() {
