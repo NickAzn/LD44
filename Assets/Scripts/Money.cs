@@ -7,6 +7,7 @@ public class Money : MonoBehaviour {
     public float moneyValue;
     public GameObject particles;
     public bool randomRot = true;
+    public AudioClip soundEffect;
 
     private void Start() {
         if (randomRot) {
@@ -24,6 +25,9 @@ public class Money : MonoBehaviour {
                     prt.transform.SetParent(collision.transform);
                     prt.transform.localScale = Vector3.one;
                 }
+            }
+            if (soundEffect != null) {
+                SoundManager.Instance.PlaySfx(soundEffect);
             }
             Destroy(gameObject);
         }

@@ -258,6 +258,7 @@ MonoBehaviour:
   particles: {fileID: 6170597212326933749, guid: 4ad406ee756ae424dbf3c41459984386,
     type: 3}
   randomRot: 0
+  soundEffect: {fileID: 8300000, guid: 03d31c64e791f054c95145149b6d0d96, type: 3}
 --- !u!58 &7380464142589976076
 CircleCollider2D:
   m_ObjectHideFlags: 0

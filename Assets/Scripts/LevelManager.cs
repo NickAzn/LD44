@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour {
 
@@ -16,6 +17,8 @@ public class LevelManager : MonoBehaviour {
     public GameObject endPanel;
     public TextMeshProUGUI endHighscore;
     public GameObject startPanel;
+    public Toggle musicToggle;
+    public Toggle sfxToggle;
 
     float speedMult = 1;
     float highscore = 0;
@@ -49,6 +52,8 @@ public class LevelManager : MonoBehaviour {
         endPanel.SetActive(false);
         startPanel.SetActive(true);
         highscoreMoney.text = string.Format("Largest Cash Size: ${0:#.00}", PlayerPrefs.GetFloat("HIGHSCORE", 0));
+        musicToggle.isOn = SoundManager.Instance.GetMusicToggle();
+        sfxToggle.isOn = SoundManager.Instance.GetSfxToggle();
     }
 
     public float GetSpeedMult() {
@@ -129,5 +134,13 @@ public class LevelManager : MonoBehaviour {
 
     public void RestartGame() {
         SceneManager.LoadScene(0);
+    }
+
+    public void ToggleMusic(Toggle tgl) {
+        SoundManager.Instance.ToggleMusic(tgl.isOn);
+    }
+
+    public void ToggleSfx(Toggle tgl) {
+        SoundManager.Instance.ToggleSfx(tgl.isOn);
     }
 }

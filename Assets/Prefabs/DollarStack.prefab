@@ -125,6 +125,7 @@ MonoBehaviour:
   particles: {fileID: 1226160861079547662, guid: 08fade4202db81f4a9b32a73ed75a6c7,
     type: 3}
   randomRot: 1
+  soundEffect: {fileID: 8300000, guid: 09cde1b557b456f4c887e59d3f60486b, type: 3}
 --- !u!1 &1154614448546254484
 GameObject:
   m_ObjectHideFlags: 0
